@@ -112,7 +112,7 @@ module "build" {
 
     # http://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref.html
     # http://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
-    build_image         = "aws/codebuild/standard:2.0"
+    build_image         = "aws/codebuild/standard:4.0"
     build_compute_type  = "BUILD_GENERAL1_SMALL"
 
     # These attributes are optional, used as ENV variables when building Docker images and pushing them to ECR
@@ -264,7 +264,7 @@ Available targets:
 | aws\_account\_id | AWS Account ID. Used as CodeBuild ENV variable when building Docker images. [For more info](http://docs.aws.amazon.com/codebuild/latest/userguide/sample-docker.html) | `string` | `""` | no |
 | branch | Branch of the GitHub repository, _e.g._ `master` | `string` | n/a | yes |
 | build\_compute\_type | `CodeBuild` instance size.  Possible values are:<pre>BUILD_GENERAL1_SMALL</pre><pre>BUILD_GENERAL1_MEDIUM</pre><pre>BUILD_GENERAL1_LARGE</pre> | `string` | `"BUILD_GENERAL1_SMALL"` | no |
-| build\_image | Docker image for build environment, _e.g._ `aws/codebuild/standard:2.0` or `aws/codebuild/eb-nodejs-6.10.0-amazonlinux-64:4.0.0` | `string` | `"aws/codebuild/standard:2.0"` | no |
+| build\_image | Docker image for build environment, _e.g._ `aws/codebuild/standard:4.0` or `aws/codebuild/eb-nodejs-6.10.0-amazonlinux-64:4.0.0` | `string` | `"aws/codebuild/standard:4.0"` | no |
 | buildspec | Declaration to use for building the project. [For more info](http://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html) | `string` | `""` | no |
 | codebuild\_cache\_bucket\_suffix\_enabled | The cache bucket generates a random 13 character string to generate a unique bucket name. If set to false it uses terraform-null-label's id value | `bool` | `true` | no |
 | delimiter | Delimiter to be used between `name`, `namespace`, `stage`, etc. | `string` | `"-"` | no |

@@ -5,7 +5,7 @@ data "aws_region" "default" {
 }
 
 module "label" {
-  source     = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.17.0"
+  source     = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.19.2"
   enabled    = var.enabled
   namespace  = var.namespace
   name       = var.name
@@ -150,7 +150,7 @@ data "aws_iam_policy_document" "codebuild" {
 }
 
 module "codebuild" {
-  source                      = "git::https://github.com/cloudposse/terraform-aws-codebuild.git?ref=tags/0.17.0"
+  source                      = "git::https://github.com/cloudposse/terraform-aws-codebuild.git?ref=tags/0.24.0"
   enabled                     = var.enabled
   namespace                   = var.namespace
   name                        = var.name
